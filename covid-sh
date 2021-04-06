@@ -1,0 +1,13 @@
+#!/bin/bash
+
+country=us
+
+x=$(curl -s https://www.worldometers.info/coronavirus/country/$country/ | grep -oe "<span style=\"color:#aaa\">.*</span>" -e "<span>.*</span>" | tr -d '<span>|</span>|<span style="color:#aaa">|DLb' | sed '1s/^/Coronavirus Cases: /' | sed '2s/^/Deaths: /' | sed '3s/^/Recovered: /' | sed '/^$/d' ) 
+
+printf "${x}\n" | awk '{ gsub("Coronavirus Cases: ", "\033[1;33m&\033[0m");
+						 gsub("Deaths:", "\033[0;31m&\033[0m");
+                         gsub("Recovered:", "\033[1;36m&\033[0m"); print }'
+
+
+#Add this code at the end of the curl code above  | tr '\n' ' '  if u want to print all info in one line.
+#Change the country variable above to yours to get the latest info....
