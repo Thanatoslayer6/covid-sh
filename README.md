@@ -2,7 +2,7 @@
 A simple bash script to get the latest information about covid-19 in your country, the data extracted by this script is taken from this 
 Covid-19 [site](https://ftp.worldometers.info/coronavirus/)
 
-  ![image](https://user-images.githubusercontent.com/76466992/113694409-4ea38480-9702-11eb-91a6-9a756b4e703f.png) 
+  ![image](https://user-images.githubusercontent.com/76466992/113834332-4b210380-97bd-11eb-975d-c3db2a49e63f.png)
 
 <h1> Getting Started </h1>
 
